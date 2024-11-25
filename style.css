@@ -1,0 +1,143 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: #1a1a1a;
+}
+
+/* Globe container */
+#globe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Main content layout */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+nav {
+    padding: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Sections */
+main {
+    padding-top: 80px; /* Account for fixed header */
+}
+
+section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+/* Hero section */
+#hero {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #bdbdbd;
+}
+
+/* Globe markers */
+.marker {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    font-size: 12px;
+    color: #333;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.marker:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+}

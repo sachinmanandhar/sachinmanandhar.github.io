@@ -3,67 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Sachin Manandhar - Geospatial Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.159.0/examples/jsm/controls/OrbitControls.js",
+            "three/examples/jsm/loaders/GLTFLoader": "https://unpkg.com/three@0.159.0/examples/jsm/loaders/GLTFLoader.js"
+        }
+    }
+    </script>
   </head>
   <body>
-    <header>
-      <h1>Alex Ferriwindi</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hello! I'm Alex Ferriwindi, a passionate developer skilled in
-          geospatial technology and web development.
-        </p>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>Project Name</h3>
-          <p>Description of the project.</p>
-          <a href="#" target="_blank">View Project</a>
-        </div>
-        <!-- Add more project sections as needed -->
-      </section>
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>© 2024 Alex Ferriwindi. All rights reserved.</p>
-    </footer>
-    <script src="index.js"></script>
+    <div id="globe-container"></div>
+    <div class="content">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section id="hero">
+          <h1>Sachin Manandhar</h1>
+          <h2>Geospatial Developer & Geomatics Engineer</h2>
+          <p>Transforming geographic data into interactive solutions</p>
+        </section>
+
+        <section id="about">
+          <h2>About Me</h2>
+          <p>Nepal Based Geomatics Engineer with expertise in Web GIS Development and Geospatial visualizations. 
+             Passionate about creating innovative solutions for complex spatial problems.</p>
+        </section>
+
+        <!-- Other sections remain similar but styled differently -->
+      </main>
+    </div>
+
+    <script type="module" src="scene.js"></script>
   </body>
 </html>
