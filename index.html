@@ -145,36 +145,36 @@
           <div class="interests-section">
             <h3>Areas of Interest</h3>
             <div class="interests-grid">
-              <div class="interest-item">
+              <div class="interest-item" data-category="webgis">
                 <i class="bi bi-globe-americas"></i>
                 <h4>Geospatial Development</h4>
                 <p>
                   Interactive WebGIS applications and spatial data solutions
                 </p>
               </div>
-              <div class="interest-item">
+              <div class="interest-item" data-category="3d">
                 <i class="bi bi-boxes"></i>
                 <h4>3D Visualization</h4>
                 <p>
                   Immersive geospatial visualizations and virtual environments
                 </p>
               </div>
-              <div class="interest-item">
+              <div class="interest-item" data-category="modeling">
                 <i class="bi bi-graph-up"></i>
                 <h4>Predictive Modeling</h4>
                 <p>Environmental and spatial analysis models</p>
               </div>
-              <div class="interest-item">
+              <div class="interest-item" data-category="data">
                 <i class="bi bi-database-check"></i>
                 <h4>Data Management</h4>
                 <p>Spatial database systems and infrastructure</p>
               </div>
-              <div class="interest-item">
+              <div class="interest-item" data-category="ai">
                 <i class="bi bi-robot"></i>
                 <h4>AI Integration</h4>
                 <p>Machine learning in geospatial applications</p>
               </div>
-              <div class="interest-item">
+              <div class="interest-item" data-category="cartography">
                 <i class="bi bi-map"></i>
                 <h4>Digital Cartography</h4>
                 <p>Interactive web mapping and visualization</p>
@@ -202,46 +202,6 @@
                 National Reconstruction Portal, and Infrastructure
                 Sustainability Tools.
               </p>
-            </div>
-
-            <div class="interests-section">
-              <h3>Areas of Interest</h3>
-              <div class="interests-grid">
-                <div class="interest-item">
-                  <i class="bi bi-globe-americas"></i>
-                  <h4>Geospatial Development</h4>
-                  <p>
-                    Interactive WebGIS applications and spatial data solutions
-                  </p>
-                </div>
-                <div class="interest-item">
-                  <i class="bi bi-boxes"></i>
-                  <h4>3D Visualization</h4>
-                  <p>
-                    Immersive geospatial visualizations and virtual environments
-                  </p>
-                </div>
-                <div class="interest-item">
-                  <i class="bi bi-graph-up"></i>
-                  <h4>Predictive Modeling</h4>
-                  <p>Environmental and spatial analysis models</p>
-                </div>
-                <div class="interest-item">
-                  <i class="bi bi-database-check"></i>
-                  <h4>Data Management</h4>
-                  <p>Spatial database systems and infrastructure</p>
-                </div>
-                <div class="interest-item">
-                  <i class="bi bi-robot"></i>
-                  <h4>AI Integration</h4>
-                  <p>Machine learning in geospatial applications</p>
-                </div>
-                <div class="interest-item">
-                  <i class="bi bi-map"></i>
-                  <h4>Digital Cartography</h4>
-                  <p>Interactive web mapping and visualization</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -339,6 +299,7 @@
                 <span class="skill-tag">GeoServer</span>
                 <span class="skill-tag">GDAL</span>
                 <span class="skill-tag">PostGIS</span>
+                <span class="skill-tag">pgRouting</span>
                 <span class="skill-tag">OpenLayers.js</span>
               </div>
             </div>
@@ -355,6 +316,14 @@
               <h3><i class="fas fa-code-branch"></i> Version Control</h3>
               <div class="skill-tags">
                 <span class="skill-tag">Git</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3><i class="fas fa-route"></i> Spatial Analysis & Routing</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">pgRouting</span>
+                <span class="skill-tag">Network Analysis</span>
               </div>
             </div>
 
@@ -468,10 +437,23 @@
         </section>
 
         <section id="projects">
-          <h2>Projects</h2>
+          <div class="section-header">
+            <h2>Projects</h2>
+            <div class="filter-container">
+              <select id="projectFilter" class="project-filter">
+                <option value="all">All Projects</option>
+                <option value="webgis">Geospatial Development</option>
+                <option value="3d">3D Visualization</option>
+                <option value="modeling">Predictive Modeling</option>
+                <option value="data">Data Management</option>
+                <option value="ai">AI Integration</option>
+                <option value="cartography">Digital Cartography</option>
+              </select>
+            </div>
+          </div>
           <div class="projects-container">
             <!-- Project 1 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="webgis,data,cartography">
               <div class="project-image">
                 <img src="images/springs.png" alt="Spring Revival Project" />
               </div>
@@ -501,7 +483,7 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="webgis,data,cartography">
               <div class="project-image">
                 <img
                   src="images/nra.png"
@@ -531,7 +513,7 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="modeling,ai">
               <div class="project-image">
                 <img
                   src="images/giz.png"
@@ -554,7 +536,7 @@
             </div>
 
             <!-- Project 4 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="webgis,data,cartography">
               <div class="project-image">
                 <img src="images/vms.png" alt="Volunteer Management System" />
               </div>
@@ -582,7 +564,7 @@
             </div>
 
             <!-- project 5 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="webgis,data,cartography">
               <div class="project-image">
                 <img src="images/rde.png" alt="Volunteer Management System" />
               </div>
@@ -610,7 +592,7 @@
               </div>
             </div>
             <!-- project 6 -->
-            <div class="project-card">
+            <div class="project-card" data-tags="webgis,data,cartography">
               <div class="project-image">
                 <img src="images/nbs.png" alt="Nature Based Solutions" />
               </div>
@@ -627,8 +609,40 @@
                   and many more related to Nature Based Solutions across HKH
                   Region
                 </p>
-                <a
+                <!-- <a
                   href="https://vms.ndrrma.gov.np/"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a> -->
+              </div>
+            </div>
+
+            <!-- project 7 -->
+            <div class="project-card" data-tags="3d,data,cartography">
+              <div class="project-image">
+                <img src="images/3d.png" alt="Nature Based Solutions" />
+              </div>
+              <div class="project-content">
+                <h3>3D Visualizations of Springs</h3>
+                <p class="project-subtitle">ICIMOD</p>
+                <div class="project-roles">
+                  <span class="role-tag">Full Stack Development</span>
+                  <span class="role-tag">Database Design</span>
+                  <span class="role-tag">UI/UX Wireframe</span>
+                </div>
+                <p class="project-description">
+                  An interactive 3D visualization platform that displays spring
+                  locations within their topographical context, integrating
+                  multiple geospatial layers including land use/land cover
+                  patterns and terrain slope analysis. This immersive
+                  visualization enables better understanding of spring
+                  distribution and their relationship with surrounding landscape
+                  features.
+                </p>
+                <a
+                  href="http://hkhsprings.icimod.org/3dmodel"
                   class="project-link"
                   target="_blank"
                 >
@@ -684,5 +698,6 @@
     </div>
 
     <script type="module" src="scene.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

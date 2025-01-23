@@ -960,3 +960,44 @@ section {
     height: 150px;
   }
 }
+.project-card.hidden {
+  display: none;
+}
+
+.interest-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+}
+
+.interest-item.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.project-filter {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.project-filter:hover {
+  border-color: #666;
+}
+
+.project-filter:focus {
+  border-color: #333;
+}
