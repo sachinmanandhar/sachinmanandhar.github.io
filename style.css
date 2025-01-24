@@ -118,7 +118,7 @@ section {
 /* Hero section */
 #hero {
   text-align: center;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -412,12 +412,15 @@ section {
 }
 
 .timeline-date span {
-  background: #2196f3;
-  color: white;
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: inline-block;
+  border: 2px solid #2196f3;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .timeline-content {
@@ -427,15 +430,30 @@ section {
 }
 
 .timeline-content h3 {
-  color: #2196f3;
+  color: #ffffff;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.timeline-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: #2196f3;
 }
 
 .timeline-content h4 {
-  color: #666;
+  color: #90caf9;
   margin-bottom: 1rem;
   font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .timeline-content p {
@@ -495,12 +513,22 @@ section {
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .timeline-content h3 {
+  .timeline-date span {
+    background: rgba(100, 181, 246, 0.1);
     color: #64b5f6;
+    border-color: #64b5f6;
+  }
+
+  .timeline-content h3 {
+    color: #ffffff;
+  }
+
+  .timeline-content h3::after {
+    background: #64b5f6;
   }
 
   .timeline-content h4 {
-    color: #bbb;
+    color: #90caf9;
   }
 
   .timeline-content p {
@@ -512,10 +540,6 @@ section {
   }
 
   .timeline-dot {
-    background: #64b5f6;
-  }
-
-  .timeline-date span {
     background: #64b5f6;
   }
 }
