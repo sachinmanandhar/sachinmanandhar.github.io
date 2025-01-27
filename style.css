@@ -1053,3 +1053,29 @@ section {
   visibility: hidden;
   transition: opacity 0.2s, visibility 0.2s;
 }
+
+/* Add this to the end of your CSS file */
+body::after {
+  content: "";
+  display: block;
+  height: 100vh; /* Creates space after publications for globe interaction */
+  background: transparent;
+}
+
+#globe-container {
+  transition: opacity 0.3s ease, z-index 0s;
+}
+
+#globe-container.interactive {
+  cursor: grab;
+}
+
+#globe-container.interactive:active {
+  cursor: grabbing;
+}
+
+/* Update the content z-index */
+.content {
+  position: relative;
+  z-index: 2; /* Ensure content is above globe until publications section */
+}
